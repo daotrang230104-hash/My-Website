@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thiết kế web</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      text-align: center;
+      background: #fdf6f0; /* pastel nền */
+      margin: 0;
+      padding: 40px;
+      color: #333;
+    }
+    h1 {
+      color: #6d597a;
+      font-size: 42px;
+      margin-bottom: 30px;
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      background: #b56576; /* pastel hồng đất */
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: #e56b6f;
+    }
+    .content {
+      margin-top: 30px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+    .content.show {
+      max-height: 2000px; /* đủ lớn để chứa nội dung */
+      opacity: 1;
+      padding: 20px;
+    }
+    pre {
+      background: #f0eefc;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    h2 {
+      color: #355070;
+    }
+  </style>
+</head>
+<body>
+  <h1>Thiết kế web</h1>
+
+  <div class="menu">
+    <button class="btn" onclick="showContent('theory')">Lý thuyết cơ bản</button>
+    <button class="btn" onclick="showContent('example')">Ví dụ</button>
+  </div>
+
+  <!-- Lý thuyết -->
+  <div id="theory" class="content">
+    <h2>1. Thiết kế web là gì?</h2>
+    <p>Thiết kế web là quá trình tạo ra giao diện và cấu trúc của một trang web để hiển thị trên trình duyệt, bao gồm:</p>
+    <ul>
+      <li>Nội dung (text, hình ảnh, video…)</li>
+      <li>Giao diện (bố cục, màu sắc, font chữ…)</li>
+      <li>Tương tác (nút bấm, form, liên kết…)</li>
+    </ul>
+
+    <h2>2. HTML là gì?</h2>
+    <p>HTML (HyperText Markup Language) là ngôn ngữ đánh dấu, dùng để xây dựng cấu trúc cơ bản của trang web.</p>
+    <p>HTML không phải ngôn ngữ lập trình, mà là khung xương của website.</p>
+
+    <h2>3. Cấu trúc cơ bản của một trang HTML</h2>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề trang&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Tiêu đề chính&lt;/h1&gt;
+    &lt;p&gt;Đoạn văn bản nội dung.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+    <ul>
+      <li><code>&lt;!DOCTYPE html&gt;</code>: Khai báo trang dùng HTML5.</li>
+      <li><code>&lt;html&gt;...&lt;/html&gt;</code>: Bao toàn bộ nội dung trang web.</li>
+      <li><code>&lt;head&gt;...&lt;/head&gt;</code>: Chứa thông tin “ngầm” (tiêu đề, meta, CSS, script...).</li>
+      <li><code>&lt;body&gt;...&lt;/body&gt;</code>: Chứa nội dung hiển thị.</li>
+    </ul>
+
+    <h2>4. Một số thẻ HTML cơ bản</h2>
+    <ul>
+      <li>Tiêu đề: <code>&lt;h1&gt;</code> đến <code>&lt;h6&gt;</code></li>
+      <li>Đoạn văn: <code>&lt;p&gt;</code></li>
+      <li>Liên kết: <code>&lt;a href="url"&gt;...&lt;/a&gt;</code></li>
+      <li>Hình ảnh: <code>&lt;img src="link" alt="mô tả"&gt;</code></li>
+      <li>Danh sách có thứ tự: <code>&lt;ol&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ol&gt;</code></li>
+      <li>Danh sách không thứ tự: <code>&lt;ul&gt;&lt;li&gt;...&lt;/li&gt;&lt;/ul&gt;</code></li>
+      <li>Bảng: <code>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;</code></li>
+      <li>Form nhập liệu: <code>&lt;form&gt;, &lt;input&gt;, &lt;textarea&gt;, &lt;button&gt;</code></li>
+    </ul>
+
+    <h2>5. Liên kết HTML với CSS và JavaScript</h2>
+    <p><b>CSS</b>: Trang trí và định dạng (màu sắc, font, bố cục).</p>
+    <p><b>JavaScript</b>: Thêm tương tác (hiệu ứng, xử lý sự kiện...).</p>
+  </div>
+
+  <!-- Ví dụ -->
+  <div id="example" class="content">
+    <h2>1. Website của VnExpress cung cấp dịch vụ/ứng dụng gì?</h2>
+    <p>Chủ yếu cung cấp tin tức trực tuyến: chính trị, kinh tế, xã hội, thể thao, giải trí, công nghệ, du lịch…</p>
+    <p>Ngoài ra còn có dịch vụ kèm theo: quảng cáo, chuyên trang doanh nghiệp, rao vặt, việc làm, eBox, báo quốc tế...</p>
+
+    <h2>2. Đối tượng chính là ai?</h2>
+    <ul>
+      <li>Người đọc phổ thông: công chúng cần cập nhật tin tức hàng ngày.</li>
+      <li>Doanh nghiệp, tổ chức: muốn quảng cáo, truyền thông thương hiệu.</li>
+      <li>Học sinh – sinh viên, người nghiên cứu: dùng tin tức làm tham khảo.</li>
+    </ul>
+
+    <h2>3. Web có dạng Website hay Ứng dụng Web?</h2>
+    <p>VnExpress.vn là Website tin tức (có cấu trúc portal/news site).</p>
+    <p>Song song, họ cũng phát triển Ứng dụng Web và App di động (VnExpress app trên iOS/Android).</p>
+  </div>
+
+  <script>
+    function showContent(id) {
+      document.querySelectorAll('.content').forEach(div => {
+        div.classList.remove('show');
+      });
+      document.getElementById(id).classList.add('show');
+    }
+  </script>
+</body>
+</html>
