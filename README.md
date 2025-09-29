@@ -47,7 +47,6 @@
   </style>
 </head>
 <body>
-  <h1>Thiết kế web</h1>
   <div class="menu">
     <button onclick="showContent('lythuyet')">Lý thuyết cơ bản</button>
     <button onclick="showContent('vidu')">Ví dụ</button>
