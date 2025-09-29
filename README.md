@@ -1,7 +1,6 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Thiết kế web</title>
   <style>
     body {
       font-family: Arial, sans-serif;
